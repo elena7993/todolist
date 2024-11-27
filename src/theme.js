@@ -1,4 +1,4 @@
-import { extendBaseTheme } from "@chakra-ui/react";
+import { extendTheme } from "@chakra-ui/react";
 import { mode } from "@chakra-ui/theme-tools";
 
 const config = {
@@ -27,7 +27,7 @@ const components = {
 
 // 우리가 만든 컴포넌트가 아니라 차크라가 제공하는 컴포넌트임
 
-const theme = extendBaseTheme({
+const theme = extendTheme({
   styles,
   components,
   config,

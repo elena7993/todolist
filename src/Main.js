@@ -1,6 +1,7 @@
 import { Container, LightMode, useColorMode } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
+import Todo from "./components/Todo";
 
 const Main = () => {
   const [todos, setTodos] = useState(() => {
@@ -30,7 +31,9 @@ const Main = () => {
       boxShadow={"0 0 10px rgba(0, 0, 0, 0.1)"}
       margin={"0 auto"}
     >
-      <Header />
+      <Header todos={todos} setTodos={setTodos} />
+
+      <Todo todos={todos} setTodos={setTodos} />
     </Container>
   );
 };
