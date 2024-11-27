@@ -1,6 +1,14 @@
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
-import { Box, Heading, Input, Text, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Input,
+  Text,
+  useColorMode,
+} from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
+import Alert from "./Alert";
 
 const Header = ({ todos, setTodos }) => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -57,6 +65,8 @@ const Header = ({ todos, setTodos }) => {
             margin={"15px 0"}
           />
         </Box>
+
+        <Alert />
       </Heading>
     </Box>
   );
